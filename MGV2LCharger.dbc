@@ -52,6 +52,8 @@ BO_ 835 VCUMsg343: 0 VCU
 BO_ 840 VCUMsg348: 0 VCU
 
 BO_ 916 VCUMsg394: 0 VCU
+   SG_ CurrentRequest : 15|8@0+ (1,0) [0|0] "Amps" Vector__XXX
+   SG_ VoltageSetpoint : 39|16@0+ (1,0) [0|0] "V" Vector__XXX
 
 BO_ 918 VCUMsg396: 0 VCU
 
@@ -64,6 +66,8 @@ BO_ 804 MgChargerGen2Msg324: 8 MgChargerGen2
    SG_ V2L_Present : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 827 MgChargerGen2Msg33B: 0 MgChargerGen2
+   SG_ CP_Duty : 6|7@0+ (1,0) [0|0] "%" Vector__XXX
+   SG_ ChargeActive : 7|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 829 MgChargerGen2Msg33D: 0 MgChargerGen2
 
@@ -95,7 +99,9 @@ BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
 BA_DEF_DEF_ "matchingcriteria" 0;
 BA_DEF_DEF_ "filterlabeling" 1;
 BA_DEF_DEF_ "isj1939dbc" 0;
+CM_ SG_ 916 CurrentRequest "Not_Confirmed";
 VAL_ 663 Mode 1 "Standby" 3 "Driving" 6 "AC_Charging" 7 "DCFC";
 VAL_ 831 V2L_Control 70 "Off" 72 "On";
 VAL_ 804 V2L_Present 0 "No_Adaptor" 123 "Adaptor_Detected";
+VAL_ 827 ChargeActive 0 "Not_Charging" 1 "Charging";
 VAL_ 412 DCDC_Control 6 "Off" 38 "No Description";
